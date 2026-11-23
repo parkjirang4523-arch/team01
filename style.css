@@ -1,0 +1,142 @@
+/* ==========================================================================
+   매직 스트링 입체도형 3D 커스텀 스타일시트
+   ========================================================================== */
+
+/* 탭 버튼 스타일 */
+.tab-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2), 0 2px 4px -2px rgba(59, 130, 246, 0.2);
+}
+
+/* 도형 선택 버튼 */
+.shape-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #475569;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.shape-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.shape-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.shape-btn .badge {
+  font-size: 0.65rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.shape-btn.active .badge {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* 4단계 퀘스트 스텝 인디케이터 도트 */
+.quest-step-dot {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #e2e8f0;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.quest-step-dot.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.quest-step-dot.completed {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+/* PULL 슬라이더 커스텀 */
+#pull-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+#pull-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #d97706;
+}
+
+#pull-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* 인쇄 모드 (Print CSS) */
+.print-only {
+  display: none;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print, header, footer, #section-sim, #section-quiz, nav {
+    display: none !important;
+  }
+
+  #section-diy {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+    box-sizing: border-box;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}
